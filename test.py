@@ -26,7 +26,7 @@ myLcd = lcd.Jhd1313m1(0, 0x3E, 0x62)
 myLcd.clear()
 
 # Green
-myLcd.setColor(150, 150, 150)
+myLcd.setColor(50, 50, 50)
 
 # Zero the cursor
 myLcd.setCursor(0,0)
