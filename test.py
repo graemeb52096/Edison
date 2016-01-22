@@ -33,7 +33,14 @@ myLcd.setCursor(0,0)
 # Print it.
 x = 1000
 for i in range(0, x):
-    now = str(datetime.datetime.now())
+    now = datetime.datetime.now()
+
+    year = now.year
+    month = now.month
+    day = now.day
+    hour = now.hour
+    minute = now.minute
+
     myLcd.write(now)
     time.sleep(1)
     myLcd.clear
