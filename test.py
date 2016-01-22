@@ -65,7 +65,7 @@ while int(datetime.datetime.now().year) < 2020:
 
     if int(current_temp) < too_cold:
         myLcd.setCursor(1,0)
-        myString = 'Its freezing. %s' % str(current_temp)
+        myString = 'Its COLD. %s' % str(current_temp)
     else:
         myLcd.setCursor(1,5)
         myString = '%s out.' % str(current_temp)
