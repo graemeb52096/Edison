@@ -55,7 +55,7 @@ for i in range(0, x):
     myLcd.write(myString)
     time.sleep(2)
     myLcd.clear()
-    myString = 'Currently %s degrees outside' % current_temp
+    myString = 'Currently %s degrees outside' % str(current_temp)
     myLcd.write(myString)
     time.sleep(2)
     myLcd.clear()
