@@ -52,7 +52,12 @@ for i in range(0, x):
     if minute < 10:
         myString = '%s/%s/%s %s:0%s' % (day, month, year, hour, minute)
     else:
-        myString = '%s/%s/%s %s:%s\n=========================================%s' % (day, month, year, hour, minute, str(current_temp))
+        myString = '%s/%s/%s %s:%s' % (day, month, year, hour, minute)
     myLcd.clear()
+    myLcd.setCursor(10,15)
+    myLcd.write(myString)
+
+    myString = '%s degrees out.' % str(current_temp)
+    myLcd.setCursor(30, 15)
     myLcd.write(myString)
     time.sleep(2)
