@@ -50,9 +50,10 @@ for i in range(0, x):
     hour = now.hour
     minute = now.minute
 
-    myString = '%s/%s/%s %s:%sTemp: %s' % (day, month, year, hour, minute, current_temp)
-    print 'myString:',myString
-
+    myString = '%s/%s/%s %s:%s' % (day, month, year, hour, minute)
+    myLcd.write(myString)
+    time.sleep(1)
+    myString = 'Currently %s degrees outside'
     myLcd.write(myString)
     time.sleep(1)
     myLcd.clear()
