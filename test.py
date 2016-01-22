@@ -50,7 +50,7 @@ for i in range(0, x):
     hour = now.hour
     minute = now.minute
 
-    myString = '%s/%s/%s %s:%s  Temp: %s' % (day, month, year, hour, minute, current_temp)
+    myString = '%s/%s/%s %s:%sTemp: %s' % (day, month, year, hour, minute, current_temp)
     print 'myString:',myString
 
     myLcd.write(myString)
