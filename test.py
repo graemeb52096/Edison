@@ -51,7 +51,10 @@ for i in range(0, x):
     hour = now.hour
     minute = now.minute
 
-    myString = '%s/%s/%s %s:%s' % (day, month, year, hour, minute)
+    if minute < 10:
+        myString = '%s/%s/%s %s:0%s' % (day, month, year, hour, minute)
+    else:
+        myString = '%s/%s/%s %s:%s' % (day, month, year, hour, minute)
     myLcd.clear()
     myLcd.write(myString)
     time.sleep(2)
