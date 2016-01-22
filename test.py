@@ -63,9 +63,9 @@ for i in range(0, x):
 
     print int(current_temp) < too_cold
     if int(current_temp) < too_cold:
-        myString = '%s out.' % str(current_temp)
-    else:
         myString = 'Its freezing. %s' % str(current_temp)
+    else:
+        myString = '%s out.' % str(current_temp)
     myLcd.setCursor(1,0)
     myLcd.write(myString)
     time.sleep(2)
