@@ -41,9 +41,7 @@ for i in range(0, x):
     now = datetime.datetime.now()
 
     weather = pywapi.get_weather_from_weather_com(city, units = 'metric')
-    print weather
     current_temp = weather['current_conditions']['temperature']
-    print 'Current temp:%s' % current_temp
 
     year = now.year
     month = now.month
@@ -54,7 +52,7 @@ for i in range(0, x):
     if minute < 10:
         myString = '%s/%s/%s %s:0%s' % (day, month, year, hour, minute)
     else:
-        myString = '%s/%s/%s %s:%s\n%s degrees' % (day, month, year, hour, minute, str(current_temp))
+        myString = '%s/%s/%s %s:%s\n=========================================%s' % (day, month, year, hour, minute, str(current_temp))
     myLcd.clear()
     myLcd.write(myString)
     time.sleep(2)
