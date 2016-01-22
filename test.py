@@ -35,12 +35,14 @@ myLcd.setCursor(0,0)
 city = 'CAXX0504'
 
 # Print it.
-x = 1000000000
+x = 100000
 
 # when is it too cold?
 too_cold = -10
 
-for i in range(0, x):
+now = datetime.datetime.now()
+#for i in range(0, x):
+while int(datetime.year) < 2020:
 
     now = datetime.datetime.now()
 
