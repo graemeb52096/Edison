@@ -36,6 +36,10 @@ city = 'CAXX0504'
 
 # Print it.
 x = 1000
+
+# when is it too cold?
+too_cold = -10
+
 for i in range(0, x):
 
     now = datetime.datetime.now()
@@ -57,7 +61,10 @@ for i in range(0, x):
     myLcd.setCursor(0,0)
     myLcd.write(myString)
 
-    myString = '%s degrees out.' % str(current_temp)
+    if int(current_temp) < too_cold:
+        myString = '%s out.' % str(current_temp)
+    else:
+        myString = 'Its freezing. %s' % str(current_temp)
     myLcd.setCursor(1,0)
     myLcd.write(myString)
     time.sleep(2)
