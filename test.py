@@ -66,7 +66,7 @@ for i in range(0, x):
         myLcd.setCursor(1,0)
         myString = 'Its freezing. %s' % str(current_temp)
     else:
-        myLcd.setCursor(1,15)
+        myLcd.setCursor(1,1)
         myString = '%s out.' % str(current_temp)
     myLcd.write(myString)
     time.sleep(2)
