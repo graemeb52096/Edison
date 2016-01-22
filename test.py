@@ -42,6 +42,7 @@ for i in range(0, x):
 
     weather = pywapi.get_weather_from_weather_com(city, units = 'metric')
     current_temp = weather['current_conditions']['temperature']
+    print current_temp
 
     year = now.year
     month = now.month
