@@ -61,6 +61,7 @@ for i in range(0, x):
     myLcd.setCursor(0,0)
     myLcd.write(myString)
 
+    print int(current_temp)
     if int(current_temp) < too_cold:
         myString = '%s out.' % str(current_temp)
     else:
