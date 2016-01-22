@@ -47,8 +47,11 @@ while int(datetime.datetime.now().year) < 2020:
     now = datetime.datetime.now()
 
     weather = pywapi.get_weather_from_weather_com(city, units = 'metric')
-    current_temp = weather['current_conditions']['temperature']
 
+    try:
+        current_temp = weather['current_conditions']['temperature']
+    exception as e:
+        print e
     year = now.year
     month = now.month
     day = now.day
