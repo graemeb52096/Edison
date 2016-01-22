@@ -35,7 +35,7 @@ myLcd.setCursor(0,0)
 city = 'CAXX0504'
 
 # Print it.
-x = 1000000000000
+x = 100000000000
 
 # when is it too cold?
 too_cold = -10
