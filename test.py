@@ -54,10 +54,10 @@ for i in range(0, x):
     else:
         myString = '%s/%s/%s %s:%s' % (day, month, year, hour, minute)
     myLcd.clear()
-    myLcd.setCursor(10,15)
+    myLcd.setCursor(0,0)
     myLcd.write(myString)
 
     myString = '%s degrees out.' % str(current_temp)
-    myLcd.setCursor(30, 15)
+    myLcd.setCursor(1,0)
     myLcd.write(myString)
     time.sleep(2)
