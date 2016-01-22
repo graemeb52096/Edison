@@ -41,6 +41,6 @@ for i in range(0, x):
     hour = now.hour
     minute = now.minute
 
-    myLcd.write(now)
+    myLcd.write('%s/%s/%s %s:%s' % (day, month, year, hour, minute))
     time.sleep(1)
     myLcd.clear
