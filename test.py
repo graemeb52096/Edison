@@ -54,9 +54,9 @@ for i in range(0, x):
     minute = now.minute
 
     if minute < 10:
-        myString = '%s:0%s  %s/%s/%s' % (hour, minute, month, year[:-2])
+        myString = '%s:0%s  %s/%s/%s' % (hour, minute, month, str(year)[:-2])
     else:
-        myString = '%s:%s   %s/%s/%s' % (hour, minute, day, month, year[:-2])
+        myString = '%s:%s   %s/%s/%s' % (hour, minute, day, month, str(year)[:-2])
     myLcd.clear()
     myLcd.setCursor(0,0)
     myLcd.write(myString)
