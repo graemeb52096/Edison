@@ -6,6 +6,7 @@ import mraa
 import sys
 import time
 import datetime
+import pywapi
 
 import pyupm_i2clcd as lcd
 
@@ -30,10 +31,17 @@ myLcd.setColor(200, 200, 200)
 # Zero the cursor
 myLcd.setCursor(0,0)
 
+# Set city to Toronto ID#
+city = CAXX0504
+
 # Print it.
 x = 1000
 for i in range(0, x):
+
     now = datetime.datetime.now()
+
+    weather = pywapi.get_weather_from_weather_com(city, units = 'metric')
+    current_temp = weather['current_conditions']['temperature']
 
     year = now.year
     month = now.month
@@ -41,6 +49,6 @@ for i in range(0, x):
     hour = now.hour
     minute = now.minute
 
-    myLcd.write('%s/%s/%s %s:%s  ' % (day, month, year, hour, minute))
+    myLcd.write('%s/%s/%s %s:%s  Temp: %s' % (day, month, year, hour, minute, current_temp))
     time.sleep(1)
     myLcd.clear()
