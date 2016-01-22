@@ -43,4 +43,4 @@ for i in range(0, x):
 
     myLcd.write('%s/%s/%s %s:%s' % (day, month, year, hour, minute))
     time.sleep(1)
-    myLcd.clear
+    myLcd.clear()
