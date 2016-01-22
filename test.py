@@ -41,6 +41,7 @@ for i in range(0, x):
     now = datetime.datetime.now()
 
     weather = pywapi.get_weather_from_weather_com(city, units = 'metric')
+    print weather
     current_temp = weather['current_conditions']['temperature']
     print 'Current temp:%s' % current_temp
 
