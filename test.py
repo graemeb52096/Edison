@@ -42,7 +42,7 @@ too_cold = -10
 
 now = datetime.datetime.now()
 #for i in range(0, x):
-while int(datetime.year) < 2020:
+while int(datetime.datetime.now().year) < 2020:
 
     now = datetime.datetime.now()
 
