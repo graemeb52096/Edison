@@ -52,10 +52,11 @@ for i in range(0, x):
     minute = now.minute
 
     myString = '%s/%s/%s %s:%s' % (day, month, year, hour, minute)
+    myLcd.clear()
     myLcd.write(myString)
     time.sleep(2)
-    myLcd.clear()
+
     myString = 'Currently %s degrees outside' % str(current_temp)
+    myLcd.clear()
     myLcd.write(myString)
     time.sleep(2)
-    myLcd.clear()
