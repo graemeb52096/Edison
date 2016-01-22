@@ -32,7 +32,7 @@ myLcd.setColor(200, 200, 200)
 myLcd.setCursor(0,0)
 
 # Set city to Toronto ID#
-city = CAXX0504
+city = 'CAXX0504'
 
 # Print it.
 x = 1000
