@@ -50,8 +50,8 @@ while int(datetime.datetime.now().year) < 2020:
 
     try:
         current_temp = weather['current_conditions']['temperature']
-    exception as e:
-        print e
+    except:
+        print "exception"
     year = now.year
     month = now.month
     day = now.day
